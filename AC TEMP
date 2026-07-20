@@ -1,0 +1,10 @@
+print("===== SMART AC AI AGENT =====")
+
+temperature = int(input("Enter room temperature (°C): "))
+
+print("\nAI Agent is observing the environment...")
+
+if temperature >= 30:
+    print("Decision: Turn ON the Air Conditioner")
+else:
+    print("Decision: Turn OFF the Air Conditioner")
