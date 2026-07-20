@@ -11,22 +11,29 @@ grid = [
 row = 0
 col = 0
 
-# Target
-target = (0,2)
+# Target position
+target = (0, 2)
 
-print("Robot Starts at:", (row,col))
+print("Robot Starts at:", (row, col))
 
 # Rational Agent Logic
-while (row,col) != target:
+while (row, col) != target:
 
     # Move Right if possible
-    if col < 2 and grid[row][col+1] != 'X':
+    if col < 2 and grid[row][col + 1] != 'X':
         col += 1
-        print("Move Right")
+        print("Move Right ->", (row, col))
 
     # Otherwise Move Down
-    elif row < 2 and grid[row+1][col] != 'X':
+    elif row < 2 and grid[row + 1][col] != 'X':
         row += 1
-        print("Move Down")
+        print("Move Down ->", (row, col))
 
-print("\nTarget Reached!")
+    # If no move is possible
+    else:
+        print("No path exists! Robot is stuck.")
+        break
+
+# Check if target reached
+if (row, col) == target:
+    print("\nTarget Reached!")
