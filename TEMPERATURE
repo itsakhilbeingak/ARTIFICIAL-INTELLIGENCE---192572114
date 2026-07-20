@@ -1,0 +1,12 @@
+temperature = int(input())
+
+humidity = int(input())
+
+if temperature > 35 and humidity > 60:
+    print("Fan Speed High")
+
+elif temperature > 35:
+    print("Fan Speed Medium")
+
+else:
+    print("OFF")
